@@ -1,0 +1,27 @@
+scalar Date
+
+type Query {
+    groupbuy(id: ID!): GroupBuy
+    groupbuys(first: Int, after: String): GroupBuysList
+}
+
+type GroupBuy {
+    id: ID!
+    name: String!
+    description: String
+    imageUrl: String
+    price: String
+    tags: [String]
+    openDate: Date
+    closeDate: Date
+}
+
+type GroupBuysList {
+    pageInfo: PageInfo!
+    edges: [GroupBuy]
+}
+
+type PageInfo {
+    hasNext: Boolean!
+    after: String
+}

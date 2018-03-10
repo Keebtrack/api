@@ -3,8 +3,8 @@ const Promise = require('bluebird')
 const path = require('path')
 const Sequelize = require('sequelize')
 const { split, map } = require('ramda')
-const { database, google: { credentials, sheet } } = require('../config')
 
+const { database, google: { credentials, sheet } } = require('../config')
 const modelPath = '../src/models/GroupBuys.js'
 
 const sequelize = new Sequelize(database.name, database.username, database.password, {
@@ -37,6 +37,7 @@ function clearRow(row) {
   return {
     name: row.Name.value,
     description: row.Description.value,
+    username: row.Description.value,
     imgUrl: row.Image.value,
     openDate: row['Open Date'].value,
     closeDate: row['Close Date'].value,

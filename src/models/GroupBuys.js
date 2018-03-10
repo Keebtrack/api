@@ -8,7 +8,7 @@ module.exports = function UserModel(sequelize, DataTypes) {
       autoIncrement: true
     },
     name: DataTypes.STRING,
-    user: DataTypes.STRING,
+    username: DataTypes.STRING,
     price: DataTypes.STRING,
     imgUrl: DataTypes.STRING,
     description: DataTypes.STRING,

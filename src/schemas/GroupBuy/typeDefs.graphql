@@ -9,7 +9,7 @@ type GroupBuy {
     id: ID!
     name: String!
     description: String
-    imageUrl: String
+    imgUrl: String
     price: String
     tags: [String]
     openDate: Date
@@ -18,7 +18,7 @@ type GroupBuy {
 
 type GroupBuysList {
     pageInfo: PageInfo!
-    edges: [GroupBuy]
+    results: [GroupBuy]
 }
 
 type PageInfo {

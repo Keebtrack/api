@@ -2,12 +2,12 @@ import fs from 'fs';
 import path from 'path';
 import { mergeSchemas, attachDirectiveResolvers, makeExecutableSchema } from 'graphql-tools';
 
-import userTypeDefs from './User/TypeDefs.graphql';
-import userResolvers from './User/resolvers.js';
+import groupbuyTypeDefs from './GroupBuy/TypeDefs.graphql';
+import groupbuyResolvers from './GroupBuy/resolvers.js';
 
-const UserSchema = makeExecutableSchema({
-  typeDefs: userTypeDefs,
-  resolvers: userResolvers,
+const GroupBuySchema = makeExecutableSchema({
+  typeDefs: groupbuyTypeDefs,
+  resolvers: groupbuyResolvers,
 });
 
-export default mergeSchemas({ schemas: [ UserSchema ] });
+export default mergeSchemas({ schemas: [ GroupBuySchema ] });

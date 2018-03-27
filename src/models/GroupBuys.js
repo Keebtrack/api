@@ -9,6 +9,7 @@ module.exports = function UserModel(sequelize, DataTypes) {
     },
     name: DataTypes.STRING,
     username: DataTypes.STRING,
+    url: DataTypes.STRING,
     price: DataTypes.STRING,
     imgUrl: DataTypes.STRING,
     description: DataTypes.STRING,

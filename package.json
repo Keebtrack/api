@@ -24,6 +24,7 @@
     "graphql": "^0.13.1",
     "graphql-date": "^1.0.3",
     "graphql-tools": "^2.21.0",
+    "ical-generator": "^0.2.10",
     "node-sheets": "^1.0.0",
     "pg": "^7.4.1",
     "ramda": "^0.25.0",

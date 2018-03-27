@@ -2,3 +2,4 @@
 /build
 /config/production.js
 .DS_Store
+/static/*

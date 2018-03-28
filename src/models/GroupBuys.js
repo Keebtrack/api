@@ -16,6 +16,7 @@ module.exports = function UserModel(sequelize, DataTypes) {
     tags: DataTypes.ARRAY(DataTypes.TEXT),
     openDate: DataTypes.DATE,
     closeDate: DataTypes.DATE,
+    category: DataTypes.STRING
   }, {
     timestamps: false
   });

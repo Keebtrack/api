@@ -1,6 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import { graphqlExpress, graphiqlExpress } from 'apollo-server-express';
+import cors from 'cors';
 
 import { http, env } from '../config';
 
@@ -23,7 +24,7 @@ const graphqlServer = graphqlExpress((req, res) =>
   ({ schema, context: { domain, viewer: authorize(req, res) } })
 )
 
-app.use('/graphql', bodyParser.json(), graphqlServer);
+app.use('/graphql', cors(), bodyParser.json(), graphqlServer);
 
 // only start graphiql in development mode
 if (env === 'development') {

@@ -1,4 +1,5 @@
-const Sheets = require('node-sheets').default
+const Sheets = require('node-sheets')
+  .default
 const Promise = require('bluebird')
 const path = require('path')
 const Sequelize = require('sequelize')
@@ -37,8 +38,10 @@ function clearRow(row) {
   return {
     name: row.Name.value,
     description: row.Description.value,
-    username: row.Description.value,
+    username: row.User.value,
     imgUrl: row.Image.value,
+    category: row.Category.value,
+    url: row.URL.value,
     openDate: row['Open Date'].value,
     closeDate: row['Close Date'].value,
     tags: split(',', row.Tags.value),
@@ -49,13 +52,19 @@ function clearRow(row) {
 return parseTable(credentials, sheet, 'Groupbuys')
   .then(function handleRows(rows) {
     return Promise.each(map(clearRow, rows), function store(row) {
-      console.log(row)
-      console.log(GroupBuyModel)
-      return GroupBuyModel.create(row)
+      console.log("inserting groupbuy:", row.name)
+      return GroupBuyModel.findOne({ where: { name: row.name } })
+        .then(function(gb) {
+          if (gb) { // update
+            return gb.update(row);
+          } else { // insert
+            return GroupBuyModel.create(row);
+          }
+        })
     })
   })
-  .then(function handleIds(ids) {
-    console.log('done inserting', ids)
+  .then(function handleIds(groupbuys) {
+    console.log('done inserting', groupbuys)
     process.exit(0)
   })
   .catch(function handleError(err) {

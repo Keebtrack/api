@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "NODE_ENV=development nodemon dev.js | bunyan -o short",
+    "sync-sheets": "NODE_ENV=production node bin/sync-drive.js",
+    "sync-calendar": "NODE_ENV=production node bin/create-calendar.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

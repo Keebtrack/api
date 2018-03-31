@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { mergeSchemas, attachDirectiveResolvers, makeExecutableSchema } from 'graphql-tools';
 
-import groupbuyTypeDefs from './GroupBuy/TypeDefs.graphql';
+import groupbuyTypeDefs from './GroupBuy/typeDefs.graphql';
 import groupbuyResolvers from './GroupBuy/resolvers.js';
 
 const GroupBuySchema = makeExecutableSchema({

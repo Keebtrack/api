@@ -1,5 +1,5 @@
 {
-  "name": "graphql-todo",
+  "name": "keebtrack-api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,8 +7,7 @@
     "postinstall": "rm -rf dist && npx babel src --out-dir dist",
     "dev": "NODE_ENV=development nodemon dev.js | bunyan -o short",
     "sync-sheets": "NODE_ENV=production node bin/sync-drive.js",
-    "sync-calendar": "NODE_ENV=production node bin/create-calendar.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sync-calendar": "NODE_ENV=production node bin/create-calendar.js"
   },
   "engines": {
     "node": "8.9.4",

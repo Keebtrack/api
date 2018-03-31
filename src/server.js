@@ -32,7 +32,9 @@ app.use('/graphql', cors(), bodyParser.json(), graphqlServer);
 if (env === 'development') {
   log.debug('started graphiql');
   app.get('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
-};
+} else {
+  app.listen(port, () => log.info('started server on port', port));
+}
 
 export default function start() {
   app.listen(port, () => log.info('started server on port', port));

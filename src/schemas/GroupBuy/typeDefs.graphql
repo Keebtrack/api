@@ -8,6 +8,7 @@ type Query {
 type GroupBuy {
     id: ID!
     name: String!
+    url: String
     category: String
     description: String
     imgUrl: String

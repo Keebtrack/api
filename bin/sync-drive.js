@@ -36,20 +36,20 @@ function parseTable(credentials, sheetId, table) {
 
 function clearRow(row) {
   return {
-    name: row.Name.value,
+    name: row['Group buy name'].value,
     description: row.Description.value,
-    username: row.User.value,
-    imgUrl: row.Image.value,
+    username: row.Username.value,
+    imgUrl: row['Image url'].value,
     category: row.Category.value,
-    url: row.URL.value,
-    openDate: row['Open Date'].value,
-    closeDate: row['Close Date'].value,
+    url: row['Website url'].value,
+    openDate: row['Open date'].value,
+    closeDate: row['Close date'].value,
     tags: split(',', row.Tags.value),
     price: row.Price.value,
   }
 }
 
-return parseTable(credentials, sheet, 'Groupbuys')
+return parseTable(credentials, sheet, 'Group buys')
   .then(function handleRows(rows) {
     return Promise.each(map(clearRow, rows), function store(row) {
       console.log("inserting groupbuy:", row.name)

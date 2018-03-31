@@ -19,16 +19,28 @@ module.exports = {
     }
   },
   google: {
-    credentials: {
-      doc: 'google sheets credentials',
-      default: {},
-      format: Object,
-      env: 'GOOGLE_CREDENTIALS'
+    private_key_id: {
+      doc: 'google private key id',
+      default: '',
+      format: String,
+      env: 'PRIVATE_KEY_ID'
+    },
+    private_key: {
+      doc: 'google private key',
+      default: '',
+      format: String,
+      env: 'PRIVATE_KEY'
+    },
+    client_email: {
+      doc: 'google client email',
+      default: '',
+      format: String,
+      env: 'CLIENT_EMAIL'
     },
     sheet: {
       doc: 'sheet id to parse',
       format: String,
-      default: '',
+      default: '1rC-B9Hp2XOFQw_XLl3ylSjXCabF-3x-6pc9SA-crXjA',
       env: 'GOOGLE_SHEET_ID'
     },
   },

@@ -5,6 +5,8 @@ import cors from 'cors';
 
 import { http, env } from '../config';
 
+const port = process.env.PORT || http.port;
+
 import authorize from './middlewares/authorize';
 import schema from './schemas';
 import domain from './domain';

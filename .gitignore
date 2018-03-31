@@ -1,6 +1,5 @@
 /node_modules
 /build
-/config/production.js
 .DS_Store
 static/*
 /dist

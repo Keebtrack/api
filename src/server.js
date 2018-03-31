@@ -35,5 +35,5 @@ if (env === 'development') {
 };
 
 export default function start() {
-  app.listen(http.port, () => log.info('started server on port', http.port));
+  app.listen(port, () => log.info('started server on port', port));
 }

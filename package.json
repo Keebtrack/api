@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "rm -rf dist && npx babel src --out-dir dist",
     "dev": "NODE_ENV=development nodemon dev.js | bunyan -o short",
     "sync-sheets": "NODE_ENV=production node bin/sync-drive.js",
     "sync-calendar": "NODE_ENV=production node bin/create-calendar.js",

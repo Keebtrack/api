@@ -12,7 +12,7 @@ module.exports = function UserModel(sequelize, DataTypes) {
     url: DataTypes.STRING,
     price: DataTypes.STRING,
     imgUrl: DataTypes.STRING,
-    description: DataTypes.STRING,
+    description: DataTypes.STRING(3000),
     tags: DataTypes.ARRAY(DataTypes.TEXT),
     openDate: DataTypes.DATE,
     closeDate: DataTypes.DATE,

@@ -31,6 +31,8 @@ sequelize.import(path.join(__dirname, modelPath));
 
 const GroupBuyModel = sequelize.models.groupbuys;
 
+GroupBuyModel.sync({ alter: true });
+
 function parseTable(credentials, sheetId, table) {
   const sheets = new Sheets(sheet)
   return new Promise(function(resolve, reject) {

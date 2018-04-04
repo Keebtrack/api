@@ -37,6 +37,7 @@ return GroupBuyModel.findAll()
     return groupbuys.map(gb => gb.get({ plain: true }))
   })
   .then(function(groupbuys) {
+    console.log(groupbuys)
     return groupbuys.map(groupbuy => {
       calendar.createEvent({
         start: groupbuy.openDate,
@@ -48,6 +49,7 @@ return GroupBuyModel.findAll()
     })
   })
   .then(() => {
+    console.log('saving calendar')
     return new Promise((resolve, reject) => {
       return calendar.save('static/calendar.ics', function(err) {
         if (err) {
@@ -57,7 +59,10 @@ return GroupBuyModel.findAll()
       })
     })
   })
-  .then(() => process.exit(0))
+  .then(() => {
+    console.log('calendar created')
+    process.exit(0)
+  })
   .catch(err => {
     console.log(err)
     process.exit(1)

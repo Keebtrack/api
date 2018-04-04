@@ -1,0 +1,130 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Keebtrack//Group buy calendar//EN
+NAME:Group buys
+X-WR-CALNAME:Group buys
+TIMEZONE-ID:Europe/Amsterdam
+X-WR-TIMEZONE:Europe/Amsterdam
+BEGIN:VEVENT
+UID:iute@l1185.core.reaktor.fi
+SEQUENCE:0
+DTSTAMP:20180404T154420Z
+DTSTART:20180327T210000Z
+DTEND:20180427T210000Z
+SUMMARY:GMK Terminal
+DESCRIPTION:Inspired by the Green Screen monochrome monitors from the days
+  of yore (we're sure many of you remember)\, >Terminal_ is our take on a s
+ imple\, aesthetically pleasing colorway on GMK's classic profile and manuf
+ acturing.
+URL;VALUE=URI:https://thekey.company/products/gb-gmk-terminal_-preorder
+END:VEVENT
+BEGIN:VEVENT
+UID:uhdo@l1185.core.reaktor.fi
+SEQUENCE:0
+DTSTAMP:20180404T154420Z
+DTSTART:20180212T220000Z
+DTEND:20180301T220000Z
+SUMMARY:TKC-1800 V1.0 KIT
+DESCRIPTION:The case starts life as a Cherry G80-1800 injection molded cas
+ e.
+URL;VALUE=URI:https://thekey.company/collections/tkc-1800/products/tkc-180
+ 0-v1-0-kit-b-stock
+END:VEVENT
+BEGIN:VEVENT
+UID:ah4i@l1185.core.reaktor.fi
+SEQUENCE:0
+DTSTAMP:20180404T154420Z
+DTSTART:20180127T220000Z
+DTEND:20180130T220000Z
+SUMMARY:kbdfans KBD8X
+DESCRIPTION:Awesome new TKL keyboard by KBD fans
+URL;VALUE=URI:https://kbdfans.com
+END:VEVENT
+BEGIN:VEVENT
+UID:p8b4@l1185.core.reaktor.fi
+SEQUENCE:0
+DTSTAMP:20180404T154420Z
+DTSTART:20180324T220000Z
+DTEND:20180419T200000Z
+SUMMARY:Rama Works M60-A
+DESCRIPTION:The M60-A represents the benchmark and equilibrium between fun
+ ction and design for us at Rama Works. The gently exaggerated design of th
+ e frame is not understated\, but rather provocative. Inspiration and evolu
+ tion from previous models are evident in the beautifully articulated desig
+ n and the well defined aesthetic\, the fingerprint of our ‘Industrial Mode
+ rn’ designs. The M60-A offers a unique contender in the traditional 60% fo
+ rm factor.
+URL;VALUE=URI:https://rama.works/m60-a
+END:VEVENT
+BEGIN:VEVENT
+UID:cdsf@l1185.core.reaktor.fi
+SEQUENCE:0
+DTSTAMP:20180404T154420Z
+DTSTART:20180324T220000Z
+DTEND:20180427T200000Z
+SUMMARY:GMK Olivia
+DESCRIPTION:The GB is finally live!! Thank you so much to everyone who con
+ tributed feedback and helped make the set even better <2 
+URL;VALUE=URI:https://geekhack.org/index.php?topic=94903.0
+END:VEVENT
+BEGIN:VEVENT
+UID:ka5q@l1185.core.reaktor.fi
+SEQUENCE:0
+DTSTAMP:20180404T154420Z
+DTSTART:20170824T200000Z
+DTEND:20171124T220000Z
+SUMMARY:Mech27-TKLv2
+DESCRIPTION:The Mech27-TKLv2 is my second design\, and I've cut no corners
+  with this production run.  Custom printed packaging\, foam\, local machin
+ ing (I live 10 minutes from the shop!)\, and alignment pins built right in
+ to the case.
+URL;VALUE=URI:https://geekhack.org/index.php?topic=92451.0
+END:VEVENT
+BEGIN:VEVENT
+UID:chlb@l1185.core.reaktor.fi
+SEQUENCE:0
+DTSTAMP:20180404T154420Z
+DTSTART:20180321T220000Z
+DTEND:20180330T200000Z
+SUMMARY:test
+DESCRIPTION:test
+URL;VALUE=URI:http://test.com
+END:VEVENT
+BEGIN:VEVENT
+UID:g244@l1185.core.reaktor.fi
+SEQUENCE:0
+DTSTAMP:20180404T154420Z
+DTSTART:20180320T220000Z
+DTEND:20180419T200000Z
+SUMMARY:M60-A
+DESCRIPTION:The M60-A represents the benchmark and equilibrium between fun
+ ction and design for us at Rama Works. The gently exaggerated design of th
+ e frame is not understated\, but rather provocative. Inspiration and evolu
+ tion from previous models are evident in the beautifully articulated desig
+ n and the well defined aesthetic\, the fingerprint of our ‘Industrial Mode
+ rn’ designs. The M60-A offers a unique contender in the traditional 60% fo
+ rm factor.
+URL;VALUE=URI:https://rama.works/#/m60-a/
+END:VEVENT
+BEGIN:VEVENT
+UID:e7oq@l1185.core.reaktor.fi
+SEQUENCE:0
+DTSTAMP:20180404T154420Z
+DTSTART:20180321T220000Z
+DTEND:20180410T200000Z
+SUMMARY:Hasbro XDA Scrabble
+DESCRIPTION:Put on your thinking cap and grab some tiles (no peeking!): Ma
+ ssdrop x Hasbro XDA Scrabble is ready to play—and it’s as remarkable as th
+ at time you played a Q and a Z on a triple-word score. Officially licensed
+  by Hasbro\, this keycap set is themed just like a Scrabble board\, from t
+ he colors of the double-letter scores to the values associated with each l
+ etter—and everything in between. Created by new designer and lifelong boar
+ d-game fan Cassidy Williams\, it features wooden-colored alphas with a sma
+ ll number in the bottom-right corner like real Scrabble letter tiles. The 
+ modifiers\, styled in dark blue\, light blue\, red\, and pink\, are repres
+ entative of all the bonus points you can rack up on the board. Sculpted in
+  XDA profile\, the set is compatible with Cherry MX switches and clones.
+URL;VALUE=URI:https://www.massdrop.com/buy/massdrop-x-hasbro-xda-scrabble-
+ custom-keycap-set
+END:VEVENT
+END:VCALENDAR

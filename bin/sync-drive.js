@@ -9,7 +9,7 @@ const { client_email, private_key, private_key_id, sheet } = google
 
 const credentials = {
   client_email,
-  private_key,
+  private_key: private_key.replace(/\\n/g, '\n'),
   private_key_id
 }
 

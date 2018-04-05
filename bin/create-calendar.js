@@ -50,7 +50,9 @@ return GroupBuyModel.findAll()
   .then(() => {
     console.log('saving calendar')
     return new Promise((resolve, reject) => {
-      return calendar.save('static/calendar.ics', function(err) {
+      const calendarFile = path.join(__dirname, '../static/calendar.ics')
+      console.log('calendarFile', calendarFile)
+      return calendar.save(calendarFile, function(err) {
         if (err) {
           reject(err)
         }

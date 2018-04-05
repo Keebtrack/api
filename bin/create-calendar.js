@@ -6,8 +6,7 @@ const ical = require('ical-generator')
 
 const { database, google: { credentials, sheet } } = require('../config')
 const modelPath = '../src/models/GroupBuys.js'
-const domain = require('os')
-  .hostname();
+const domain = require('os').hostname();
 
 const sequelize = new Sequelize(database.name, database.username, database.password, {
   host: database.host,

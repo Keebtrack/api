@@ -13,8 +13,6 @@ const credentials = {
   private_key_id
 }
 
-console.log(credentials)
-
 const modelPath = '../src/models/GroupBuys.js'
 const sequelize = new Sequelize(database.name, database.username, database.password, {
   host: database.host,

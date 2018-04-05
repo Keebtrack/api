@@ -7,7 +7,8 @@
     "postinstall": "rm -rf ./dist && rm -rf ./static/calendar.ics && npx babel src --out-dir dist",
     "dev": "NODE_ENV=development nodemon dev.js | bunyan -o short",
     "sync-sheets": "NODE_ENV=production node bin/sync-drive.js",
-    "sync-calendar": "NODE_ENV=production rm -rf ./static/calendar.ics && node bin/create-calendar.js"
+    "sync-calendar": "NODE_ENV=production rm -rf ./static/calendar.ics && touch ./static/calendar.ics && node bin/create-calendar.js",
+    "start": "NODE_ENV=production node dist/server.js"
   },
   "engines": {
     "node": "8.9.4",

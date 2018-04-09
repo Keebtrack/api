@@ -9,7 +9,10 @@ export default function GroupBuy({ groupbuys: GroupBuyModel }) {
     all: function({ first: limit = 10, after }) {
       return GroupBuyModel.paginate({ limit, after })
         .then(function handleResults({ cursors, results }) {
-          return { pageInfo: cursors, results: results.map(res => res.get({ plain: true })) }
+          return {
+            pageInfo: cursors,
+            results: results.map(res => res.get({ plain: true }))
+          }
         })
     }
   }

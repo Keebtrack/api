@@ -3,9 +3,8 @@ import path from 'path';
 import Domain from '../domain';
 
 const { GroupBuy } = Domain;
-console.log('calendar path', path.resolve('./static/calendar.ics'))
-const calendar = fs.readFileSync(path.resolve('./static/calendar.ics'))
-console.log('calendar loaded', calendar)
+
+const calendar = fs.readFileSync(path.resolve(__dirname, '../../static/calendar.ics')).toString()
 
 export function getCalendar(req, res) {
   return res.send(calendar)

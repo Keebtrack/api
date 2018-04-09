@@ -3,7 +3,7 @@ import path from 'path';
 import Domain from '../domain';
 
 const { GroupBuy } = Domain;
-consooe.log('calendar path', path.resolve('./static/calendar.ics'))
+console.log('calendar path', path.resolve('./static/calendar.ics'))
 const calendar = fs.readFileSync(path.resolve('./static/calendar.ics')).toString()
 console.log('calendar loaded', calendar)
 

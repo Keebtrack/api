@@ -8,9 +8,7 @@ const { Calendar } = Domain;
 export function getCalendar(req, res) {
   return Calendar.get()
     .then(calendar => {
-      console.log(calendar)
       return res.end(calendar, 'binary');
-      // return res.send(calendar)
     })
     .catch(err => res.send({ error: 'could not get calendar' }))
 }

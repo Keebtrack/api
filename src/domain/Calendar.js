@@ -6,7 +6,7 @@ export default function Calendar({ calendar: CalendarModel, Sequelize }) {
         .then(function handleCalendar(id) {
           return CalendarModel.findById(id)
             .then(function handleInstance(instance) {
-              return calendar.blob
+              return instance.blob
             })
         })
     }

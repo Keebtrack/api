@@ -5,7 +5,7 @@ const { split, map } = require('ramda')
 const ical = require('ical-generator')
 
 const { database, google: { credentials, sheet } } = require('../config')
-const modelPath = '../src/models/GroupBuys.js'
+
 const domain = require('os').hostname();
 
 const sequelize = new Sequelize(database.name, database.username, database.password, {
@@ -19,9 +19,13 @@ const sequelize = new Sequelize(database.name, database.username, database.passw
 
 sequelize.authenticate();
 
-sequelize.import(path.join(__dirname, modelPath));
+sequelize.import(path.join(__dirname, '../src/models/GroupBuys.js'));
+sequelize.import(path.join(__dirname, '../src/models/Calendar.js'));
 
 const GroupBuyModel = sequelize.models.groupbuys;
+const CalendarModel = sequelize.models.calendar;
+
+CalendarModel.sync({ alter: true });
 
 let calendar = ical({ domain: domain, name: 'Group buys', timezone: 'Europe/Amsterdam' });
 
@@ -36,7 +40,6 @@ return GroupBuyModel.findAll()
     return groupbuys.map(gb => gb.get({ plain: true }))
   })
   .then(function(groupbuys) {
-    console.log(groupbuys)
     return groupbuys.map(groupbuy => {
       calendar.createEvent({
         start: groupbuy.openDate,
@@ -49,16 +52,8 @@ return GroupBuyModel.findAll()
   })
   .then(() => {
     console.log('saving calendar')
-    return new Promise((resolve, reject) => {
-      const calendarFile = path.resolve(path.dirname(require.main.filename), '../static/calendar.ics')
-      console.log('calendar file path:', calendarFile)
-      return calendar.save(calendarFile, function(err) {
-        if (err) {
-          reject(err)
-        }
-        resolve()
-      })
-    })
+    console.log(calendar.toString())
+    return CalendarModel.create({ blob: calendar.toString() })
   })
   .then(() => {
     console.log('calendar created')

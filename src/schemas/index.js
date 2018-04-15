@@ -5,9 +5,17 @@ import { mergeSchemas, attachDirectiveResolvers, makeExecutableSchema } from 'gr
 import groupbuyTypeDefs from './GroupBuy/typeDefs.graphql';
 import groupbuyResolvers from './GroupBuy/resolvers.js';
 
+import vendorTypeDefs from './Vendor/typeDefs.graphql';
+import vendorResolvers from './Vendor/resolvers.js';
+
 const GroupBuySchema = makeExecutableSchema({
   typeDefs: groupbuyTypeDefs,
   resolvers: groupbuyResolvers,
 });
 
-export default mergeSchemas({ schemas: [ GroupBuySchema ] });
+const VendorSchema = makeExecutableSchema({
+  typeDefs: vendorTypeDefs,
+  resolvers: vendorResolvers,
+});
+
+export default mergeSchemas({ schemas: [ GroupBuySchema, VendorSchema ] });

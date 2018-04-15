@@ -1,0 +1,12 @@
+type Query {
+    vendors: [Vendor]
+}
+
+type Vendor {
+    id: ID!
+    name: String!
+    url: String
+    region: String
+    description: String
+    logoUrl: String
+}

@@ -7,7 +7,15 @@ export default function GroupBuy({ groupbuys: GroupBuyModel }) {
         })
     },
     all: function({ first: limit = 10, after }) {
-      return GroupBuyModel.paginate({ limit, after })
+      return GroupBuyModel.paginate({
+          limit,
+          after,
+          where: {
+            closeDate: {
+              $gt: new Date(),
+            },
+          }
+        })
         .then(function handleResults({ cursors, results }) {
           return {
             pageInfo: cursors,

@@ -10,11 +10,11 @@ export default function GroupBuy({ groupbuys: GroupBuyModel }) {
       return GroupBuyModel.paginate({
           limit,
           after,
-          // where: {
-          //   closeDate: {
-          //     $gt: new Date(),
-          //   },
-          // }
+          where: {
+            closeDate: {
+              $gt: new Date(),
+            },
+          }
         })
         .then(function handleResults({ cursors, results }) {
           return {

@@ -68,7 +68,7 @@ return parseTable(credentials, sheet, 'Group buys')
           if (gb) { // update
             return gb.update(row);
           } else { // insert
-            return GroupBuyModel.create8(row);
+            return GroupBuyModel.create(row);
           }
         })
     })

@@ -6,7 +6,8 @@
   "scripts": {
     "postinstall": "rm -rf dist && npx babel src --out-dir dist",
     "dev": "NODE_ENV=development nodemon dev.js | bunyan -o short",
-    "sync-sheets": "NODE_ENV=production node bin/sync-groupbuys.js && node bin/sync-vendors.js",
+    "sync-groupbuys": "NODE_ENV=production node bin/sync-groupbuys.js",
+    "sync-vendors": "NODE_ENV=production node bin/sync-vendors.js",
     "sync-calendar": "NODE_ENV=production node bin/create-calendar.js",
     "start": "NODE_ENV=production node dist/server.js"
   },

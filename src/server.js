@@ -10,7 +10,7 @@ const port = process.env.PORT || http.port;
 import authorize from './middlewares/authorize';
 import schema from './schemas';
 import domain from './domain';
-import { getCalendar, getGroupbuys } from './endpoints';
+import { getCalendar, getGroupbuys, getRSSfeed } from './endpoints';
 import fs from 'fs';
 import log from '../lib/logger';
 
@@ -21,6 +21,7 @@ const app = express();
 // REST endpoints
 app.get('/calendar', getCalendar)
 app.get('/groupbuys', getGroupbuys)
+app.get('/rss', getRSSfeed)
 
 const graphqlServer = graphqlExpress((req, res) =>
   ({ schema, context: { domain, viewer: authorize(req, res) } })

@@ -6,6 +6,18 @@ export default function GroupBuy({ groupbuys: GroupBuyModel }) {
           return instance.get({ plain: true })
         })
     },
+    allWithoutCursor: function() {
+      return GroupBuyModel.all({
+          where: {
+            closeDate: {
+              $gt: new Date(),
+            },
+          }
+        })
+        .then(function handle(results) {
+          return results.map(res => res.get({ plain: true }))
+        })
+    },
     all: function({ first: limit = 10, after }) {
       return GroupBuyModel.paginate({
           limit,

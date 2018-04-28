@@ -39,6 +39,7 @@
     "node-sheets": "^1.0.0",
     "pg": "^7.4.1",
     "ramda": "^0.25.0",
+    "rss": "^1.2.2",
     "sequelize": "^4.35.2",
     "sequelize-cursor-pagination": "^1.0.3"
   }

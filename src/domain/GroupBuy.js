@@ -10,6 +10,7 @@ export default function GroupBuy({ groupbuys: GroupBuyModel }) {
       return GroupBuyModel.paginate({
           limit,
           after,
+          desc: true,
           where: {
             closeDate: {
               $gt: new Date(),

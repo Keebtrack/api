@@ -31,6 +31,7 @@
     "convict": "^4.0.2",
     "cors": "^2.8.4",
     "express": "^4.16.2",
+    "googleapis": "^29.0.0",
     "graphql": "^0.13.1",
     "graphql-date": "^1.0.3",
     "graphql-tools": "^2.21.0",

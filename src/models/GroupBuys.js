@@ -16,12 +16,8 @@ module.exports = function UserModel(sequelize, DataTypes) {
     tags: DataTypes.ARRAY(DataTypes.TEXT),
     openDate: DataTypes.DATE,
     closeDate: DataTypes.DATE,
+    promoted: DataTypes.BOOLEAN,
     category: DataTypes.STRING,
-    webNotified: {
-      type: DataTypes.BOOLEAN,
-      field: 'webNotified',
-      defaultValue: false,
-    },
     postedOnInstagram: {
       type: DataTypes.BOOLEAN,
       field: 'postedOnInstagram',

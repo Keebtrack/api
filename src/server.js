@@ -38,5 +38,6 @@ if (env === 'development') {
 }
 
 export default function start() {
+  app.get('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
   app.listen(port, () => log.info('started server on port', port));
 }

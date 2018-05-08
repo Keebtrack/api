@@ -16,6 +16,7 @@ type GroupBuy {
     tags: [String]
     openDate: Date
     closeDate: Date
+    promoted: Boolean
 }
 
 type GroupBuysList {

@@ -55,19 +55,23 @@ function clearRow(row) {
     closeDate: row['Close date'].value,
     tags: split(',', row.Tags.value),
     price: row.Price.value,
+    promoted: row.Promoted.value === '' ? false : true
   }
 }
 
 return parseTable(credentials, sheet, 'Group buys')
   .then(function handleRows(rows) {
-    console.log(rows)
     return Promise.each(map(clearRow, rows), function store(row) {
       console.log("inserting groupbuy:", row.name)
       return GroupBuyModel.findOne({ where: { name: row.name } })
         .then(function(gb) {
           if (gb) { // update
+            console.log('update groupbuy')
+            console.log('before', gb.get({ plain: true }))
             return gb.update(row);
           } else { // insert
+            console.log('insert groupbuy')
+            console.log(row)
             return GroupBuyModel.create(row);
           }
         })

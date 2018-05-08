@@ -55,7 +55,7 @@ function clearRow(row) {
     closeDate: row['Close date'].value,
     tags: split(',', row.Tags.value),
     price: row.Price.value,
-    promoted: row.Promoted.value === '' ? false : true
+    promoted: row.Promoted.value === undefined ? false : true
   }
 }
 
